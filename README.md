@@ -1,2 +1,1 @@
-# github-action-test
-GitHub Action test
+# GitHub Action test
