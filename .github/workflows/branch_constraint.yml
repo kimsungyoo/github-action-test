@@ -13,6 +13,8 @@ jobs:
       env: 
         SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
         TARGET_BRANCH: ${{ github.base_ref }}
+        REPOSITORY: ${{ github.repository }}
       run: |
         echo "$SOURCE_BRANCH"
         echo "$TARGET_BRANCH"
+        echo "$REPOSITORY"
