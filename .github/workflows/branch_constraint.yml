@@ -17,5 +17,6 @@ jobs:
         TARGET_REPOSITORY: ${{ github.repository }}
       run: |
         echo "$SOURCE_BRANCH"
+        echo "$SOURCE_REPOSITORY"
         echo "$TARGET_BRANCH"
         echo "$TARGET_REPOSITORY"
