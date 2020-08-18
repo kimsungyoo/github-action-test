@@ -1,0 +1,18 @@
+name: PR Branch Constraint
+
+on:
+  pull_request:
+    branches: [ master, stage, dev ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print source branch
+      env: 
+        SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
+        TARGET_BRANCH: ${{ github.base_ref }}
+      run: |
+        echo "$SOURCE_BRANCH"
+        echo "$TARGET_BRANCH"
