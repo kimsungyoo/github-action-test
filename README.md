@@ -1,2 +1,4 @@
-# github-action-test
-GitHub Action test
+# GitHub Action Test
+
+added a test
+added another test
