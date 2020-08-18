@@ -1,4 +1,4 @@
 # GitHub Action Test
 
-added a test
+added a test.
 added another test
