@@ -12,7 +12,7 @@ jobs:
     - name: Print source branch
       env: 
         SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
-        SOURCE_REPOSITORY: ${{ github.event.pull_request.head.repository }}
+        SOURCE_REPOSITORY: ${{ github.event.pull_request.repository }}
         TARGET_BRANCH: ${{ github.base_ref }}
         TARGET_REPOSITORY: ${{ github.repository }}
       run: |
