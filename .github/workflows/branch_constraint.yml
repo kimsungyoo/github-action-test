@@ -11,11 +11,13 @@ jobs:
     steps:
     - name: Print source branch
       env: 
+        GITHUB_CONTEXT: ${{ toJson(github) }}
         SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
         SOURCE_REPOSITORY: ${{ github.event.pull_request.repository }}
         TARGET_BRANCH: ${{ github.base_ref }}
         TARGET_REPOSITORY: ${{ github.repository }}
       run: |
+        echo "$GITHUB_CONTEXT"
         echo "$SOURCE_BRANCH"
         echo "$SOURCE_REPOSITORY"
         echo "$TARGET_BRANCH"
